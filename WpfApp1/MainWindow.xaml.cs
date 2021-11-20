@@ -49,11 +49,7 @@ namespace WpfApp1
             {
                 await Task.WhenAll(dinnerTasks);
 
-                if (dinnerTasks[0].Status.Equals(TaskStatus.RanToCompletion) &&
-                    dinnerTasks[1].Status.Equals(TaskStatus.RanToCompletion))
-                {
-                    FinalResultTb.Text = $"Obiad zrobiony!";
-                }
+                FinalResultTb.Text = $"Obiad zrobiony!";              
             }
             catch
             {
@@ -70,9 +66,9 @@ namespace WpfApp1
 
         private async Task<string> UgotujRyz(CancellationToken cn)
         {
-            for (int i = 100; i >=0; i--)
+            for (int i = 5; i >=0; i--)
             {
-                await Task.Delay(50);
+                await Task.Delay(1000, cn);
                 ryzTimeTb.Text = $"RYZ pozostalo: {i} sekund\n";
 
                 if (cn.IsCancellationRequested)
@@ -85,9 +81,9 @@ namespace WpfApp1
 
         private async Task<string> UpieczMieso(CancellationToken cn)
         {
-            for (int i = 180; i >= 0; i--)
+            for (int i = 10; i >= 0; i--)
             {
-                await Task.Delay(60);
+                await Task.Delay(1000, cn);
                 miesoTimeTb.Text = $"MIESO pozostalo: {i} sekund\n";
                 if (cn.IsCancellationRequested)
                 {
