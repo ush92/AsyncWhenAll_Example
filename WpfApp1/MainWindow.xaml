@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="Wyczysc" HorizontalAlignment="Left" Height="48" Margin="41,41,0,0" VerticalAlignment="Top" Width="152" Click="Button_Click"/>
+        <Button x:Name="asyncBtn" Content="Gotuj asynchronicznie" HorizontalAlignment="Left" Margin="41,115,0,0" VerticalAlignment="Top" Height="55" Width="152" Click="Button_Click_1"/>
+        <TextBox x:Name="FinalResultTb" HorizontalAlignment="Left" Height="33" Margin="280,207,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="290"/>
+        <Button x:Name="btnCancel" Content="Anuluj" HorizontalAlignment="Left" Margin="41,202,0,0" VerticalAlignment="Top" Width="152" Height="43" Click="btnCancel_Click"/>
+        <Label Content="Ryz" HorizontalAlignment="Left" Margin="280,65,0,0" VerticalAlignment="Top"/>
+        <Label Content="Mieso" HorizontalAlignment="Left" Margin="450,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.127,-0.104"/>
+        <TextBox x:Name="ryzTimeTb" HorizontalAlignment="Left" Margin="280,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="miesoTimeTb" HorizontalAlignment="Left" Margin="450,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
